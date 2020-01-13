@@ -2,12 +2,6 @@ var tweetLink = "https://twitter.com/intent/tweet?text=";
 var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    getQuote();
-    document.querySelector('.trigger').addEventListener('click', function() {
-        getQuote();
-    });
-});
 
 
 
@@ -42,3 +36,9 @@ function createTweet(input) {
         document.querySelector('.tweet').setAttribute('href', tweet);
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    getQuote();
+    document.querySelector('.trigger').addEventListener('click', function() {
+        getQuote();
+    });
+});
