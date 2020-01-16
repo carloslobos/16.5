@@ -13,6 +13,7 @@ function getQuote() {
 
 function createTweet(input) {
     var data = input[0];
+    console.log(data);
 
     var dataElement = document.createElement('div');
     dataElement.innerHTML = data.content;
@@ -23,7 +24,7 @@ function createTweet(input) {
         quoteAuthor = "Unknown author";
     };
 
-    var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
+    var tweetText = "Quote of the day - " + quoteText + ".  Author: " + quoteAuthor;
 
 
     if (tweetText.length > 140) {
@@ -36,6 +37,7 @@ function createTweet(input) {
     };
 
     document.querySelector('.tweet').setAttribute('href', tweet);
+
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -43,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.trigger').addEventListener('click', function() {
         getQuote();
     });
+
 });
